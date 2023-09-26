@@ -5,7 +5,7 @@ let screenWidth = screen.width;
 
 fadeUpItems.forEach((item) => {
   let itemDistance = item.getBoundingClientRect().top;
-  if (itemDistance < screenHeight - 100) {
+  if (itemDistance <= screenHeight - 100) {
     activateFadeUp(item);
   }
 });
@@ -13,7 +13,7 @@ fadeUpItems.forEach((item) => {
 document.addEventListener("scroll", () => {
   fadeUpItems.forEach((item) => {
     let itemDistance = item.getBoundingClientRect().top;
-    if (itemDistance < screenHeight - 100) {
+    if (itemDistance <= screenHeight - 100) {
       activateFadeUp(item);
     }
   });
